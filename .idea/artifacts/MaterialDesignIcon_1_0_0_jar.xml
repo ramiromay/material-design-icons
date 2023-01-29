@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MaterialDesignIcon-1.0.0:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MaterialDesignIcon_1_0_0_jar</output-path>
+    <root id="archive" name="MaterialDesignIcon.jar">
+      <element id="module-output" name="MaterialDesignIcon" />
+    </root>
+  </artifact>
+</component>
