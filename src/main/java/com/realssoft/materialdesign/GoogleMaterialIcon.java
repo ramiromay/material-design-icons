@@ -105,14 +105,15 @@ public class GoogleMaterialIcon
     private Font buildFont(float size)
     {
         IconFont iconFont =  GoogleMaterialDesignIcon.getIconFont(fontType);
-        Font font;
+        Font font = null;
         try
         {
             font = Font.createFont(Font.TRUETYPE_FONT, iconFont.getFontInputStream());
         }
         catch (FontFormatException | IOException e)
         {
-            throw new RuntimeException(e);
+            System.out.println("Algo salio mal");
+            e.printStackTrace();
         }
         return font.deriveFont(size);
     }
