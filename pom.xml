@@ -8,7 +8,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <groupId>com.realssoft</groupId>
+    <groupId>com.github.realssoft</groupId>
     <artifactId>MaterialDesignIcon</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
