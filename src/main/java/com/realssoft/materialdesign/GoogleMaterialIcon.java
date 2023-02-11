@@ -105,15 +105,14 @@ public class GoogleMaterialIcon
     private Font buildFont(float size)
     {
         IconFont iconFont =  GoogleMaterialDesignIcon.getIconFont(fontType);
-        Font font = null;
+        Font font;
         try
         {
             font = Font.createFont(Font.TRUETYPE_FONT, iconFont.getFontInputStream());
         }
         catch (FontFormatException | IOException e)
         {
-            System.out.println("Algo salio mal");
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return font.deriveFont(size);
     }
@@ -166,7 +165,7 @@ public class GoogleMaterialIcon
         }
         if(icon == GoogleMaterialDesignIcon.MINIMIZE)
         {
-            y += 3.25;
+            y -= 8.8;
         }
         GradientPaint gra = new GradientPaint(x1, y1, colorPrimary, x2, y2, colorSecondary);
         g2d.setPaint(gra);
