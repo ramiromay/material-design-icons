@@ -6,7 +6,6 @@ public interface IconFont
 {
 
     String getFontFamily();
-
     InputStream getFontInputStream();
 
 }
