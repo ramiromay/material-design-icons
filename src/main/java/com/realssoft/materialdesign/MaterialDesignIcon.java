@@ -16,33 +16,44 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class GoogleMaterialIcon
+public class MaterialDesignIcon
 {
 
-    private GoogleMaterialDesignIcon icon;
+    private IconCode icon;
     private FontType fontType;
     private GradientType gradientType;
+    private Color colorText;
     private Color colorPrimary;
     private Color colorSecondary;
     private int size;
 
-    public GoogleMaterialIcon()
+    public MaterialDesignIcon()
     {
-        icon = GoogleMaterialDesignIcon.IMAGE;
-        fontType = FontType.MATERIAL_SYMBOLS_OUTLINED;
+        icon = MicrosoftSegoeIcon.PHOTO;
+        fontType = FontType.MICROSOFT_SEGOE_FLUENT_ICON;
         gradientType = GradientType.HORIZONTAL;
+        colorText = Color.BLACK;
         colorPrimary = new Color(111, 111, 111);
         colorSecondary = new Color(215, 215, 215);
         size = 15;
     }
 
-    public GoogleMaterialDesignIcon getIcon()
+    public IconCode getIcon()
     {
         return icon;
     }
 
-    public void setIcon(GoogleMaterialDesignIcon icon)
+    public void setIcon(IconCode icon)
     {
+        if(icon instanceof GoogleMaterialDesignIcon ||
+                FontType.getTypeIcon(fontType) == TypeIcon.MICROSOFT_ICON)
+        {
+            throw new RuntimeException("The icon is not compatible with the Microsoft font");
+        }
+        if(icon instanceof MicrosoftSegoeIcon ||
+                FontType.getTypeIcon(fontType) == TypeIcon.GOOGLE_ICON){
+            throw new RuntimeException("The icon is not compatible with the Google font");
+        }
         this.icon = icon;
     }
 
@@ -64,6 +75,16 @@ public class GoogleMaterialIcon
     public void setGradientType(GradientType gradientType)
     {
         this.gradientType = gradientType;
+    }
+
+    public Color getColorText()
+    {
+        return colorText;
+    }
+
+    public void setColorText(Color colorText)
+    {
+        this.colorText = colorText;
     }
 
     public Color getColorPrimary()
@@ -104,7 +125,7 @@ public class GoogleMaterialIcon
 
     private Font buildFont(float size)
     {
-        IconFont iconFont =  GoogleMaterialDesignIcon.getIconFont(fontType);
+        IconFont iconFont =  Utils.getIconFont(fontType);
         Font font;
         try
         {
@@ -169,6 +190,7 @@ public class GoogleMaterialIcon
         }
         GradientPaint gra = new GradientPaint(x1, y1, colorPrimary, x2, y2, colorSecondary);
         g2d.setPaint(gra);
+        g2d.setColor(colorText);
         g2d.drawString(text, (int) x, (int) (y + ft.getAscent()));
         g2d.dispose();
         return bufImage;

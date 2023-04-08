@@ -7,8 +7,6 @@
 
 package com.realssoft.materialdesign;
 
-import java.io.InputStream;
-
 public enum GoogleMaterialDesignIcon implements IconCode
 {
 
@@ -2263,25 +2261,7 @@ public enum GoogleMaterialDesignIcon implements IconCode
     @Override
     public String getFontFamily()
     {
-        return "Material Icons";
-    }
-
-    public static IconFont getIconFont(FontType fontType)
-    {
-        return new IconFont()
-        {
-            @Override
-            public String getFontFamily()
-            {
-                return "Material Icons";
-            }
-
-            @Override
-            public InputStream getFontInputStream()
-            {
-                return GoogleMaterialDesignIcon.class.getResourceAsStream(fontType.getPath());
-            }
-        };
+        return "Google Icons";
     }
 
 }
