@@ -45,14 +45,14 @@ public class MaterialDesignIcon
 
     public void setIcon(IconCode icon)
     {
-        if(icon instanceof GoogleMaterialDesignIcon ||
-                FontType.getTypeIcon(fontType) == TypeIcon.MICROSOFT_ICON)
+        if(icon instanceof GoogleMaterialDesignIcon &&
+                FontType.getTypeIcon(fontType) != TypeIcon.GOOGLE_ICON)
         {
-            throw new RuntimeException("The icon is not compatible with the Microsoft font");
-        }
-        if(icon instanceof MicrosoftSegoeIcon ||
-                FontType.getTypeIcon(fontType) == TypeIcon.GOOGLE_ICON){
             throw new RuntimeException("The icon is not compatible with the Google font");
+        }
+        if(icon instanceof MicrosoftSegoeIcon &&
+                FontType.getTypeIcon(fontType) != TypeIcon.MICROSOFT_ICON){
+            throw new RuntimeException("The icon is not compatible with the Microsoft font");
         }
         this.icon = icon;
     }
