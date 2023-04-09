@@ -22,7 +22,7 @@ public class MaterialDesignIcon
     private IconCode icon;
     private FontType fontType;
     private GradientType gradientType;
-    private Color colorText;
+    private Color colorIcon;
     private Color colorPrimary;
     private Color colorSecondary;
     private int size;
@@ -32,7 +32,7 @@ public class MaterialDesignIcon
         icon = MicrosoftSegoeIcon.PHOTO;
         fontType = FontType.MICROSOFT_SEGOE_FLUENT_ICON;
         gradientType = GradientType.HORIZONTAL;
-        colorText = Color.BLACK;
+        colorIcon = Color.BLACK;
         colorPrimary = new Color(111, 111, 111);
         colorSecondary = new Color(215, 215, 215);
         size = 15;
@@ -77,14 +77,14 @@ public class MaterialDesignIcon
         this.gradientType = gradientType;
     }
 
-    public Color getColorText()
+    public Color getColorIcon()
     {
-        return colorText;
+        return colorIcon;
     }
 
-    public void setColorText(Color colorText)
+    public void setColorIcon(Color colorIcon)
     {
-        this.colorText = colorText;
+        this.colorIcon = colorIcon;
     }
 
     public Color getColorPrimary()
@@ -190,7 +190,7 @@ public class MaterialDesignIcon
         }
         GradientPaint gra = new GradientPaint(x1, y1, colorPrimary, x2, y2, colorSecondary);
         g2d.setPaint(gra);
-        g2d.setColor(colorText);
+        g2d.setColor(colorIcon);
         g2d.drawString(text, (int) x, (int) (y + ft.getAscent()));
         g2d.dispose();
         return bufImage;
@@ -210,6 +210,12 @@ public class MaterialDesignIcon
 
     public Icon toIcon()
     {
+        return buildIcon();
+    }
+
+    public Icon toIcon(Color colorIcon)
+    {
+        this.colorIcon = colorIcon;
         return buildIcon();
     }
 

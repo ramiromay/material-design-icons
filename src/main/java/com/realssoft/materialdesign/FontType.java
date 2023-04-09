@@ -6,7 +6,6 @@ public enum FontType
     GOOGLE_MS_OUTLINED("/font/google/MaterialSymbolsOutlined.ttf"),
     GOOGLE_MS_SHARP("/font/google/MaterialSymbolsSharp.ttf"),
     GOOGLE_MS_ROUNDED("/font/google/MaterialSymbolsRounded.ttf"),
-
     MICROSOFT_SEGOE_FLUENT_ICON("/font/microsoft/SegoeFluentIcons.ttf"),
     MICROSOFT_SEGOE_MDL2("/font/microsoft/SegMDL2.ttf");
 
