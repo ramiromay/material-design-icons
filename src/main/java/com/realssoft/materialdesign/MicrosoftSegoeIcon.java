@@ -10,7 +10,18 @@ public enum MicrosoftSegoeIcon implements IconCode
     CHROME_CLOSE('\ue8bb'),
     HOME_SOLID('\uea8a'),
     INFO_SOLID('\uf167'),
-    CONTACT_SOLID('\uea8c');
+    CONTACT_SOLID('\uea8c'),
+    ADD('\ue710'),
+    PLAY_SOLID('\uf5b0'),
+    OPEN_LOCAL('\ue8da'),
+    CHROME_BACK('\ue830'),
+    ALL_APP('\ue71d'),
+    SHOW_BCC('\ue8c4'),
+    HIDE_BCC('\ue8c5'),
+    CIRCLE_FILL('\uea3b'),
+    TRACKERS('\ueadf'),
+    DIAGNOSTIC('\ue9d9'),
+    CLEAR_ALL_INK('\ued62');
 
     private final char character;
 
