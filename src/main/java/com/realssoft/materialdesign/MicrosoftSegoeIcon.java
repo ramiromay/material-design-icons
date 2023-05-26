@@ -21,7 +21,9 @@ public enum MicrosoftSegoeIcon implements IconCode
     CIRCLE_FILL('\uea3b'),
     TRACKERS('\ueadf'),
     DIAGNOSTIC('\ue9d9'),
-    CLEAR_ALL_INK('\ued62');
+    CLEAR_ALL_INK('\ued62'),
+    COMPANION_DEVICE_FRAMEWORK('\ued5d'),
+    SAVE('\ue74e');
 
     private final char character;
 
