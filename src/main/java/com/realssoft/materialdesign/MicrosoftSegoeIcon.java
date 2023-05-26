@@ -12,6 +12,7 @@ public enum MicrosoftSegoeIcon implements IconCode
     INFO_SOLID('\uf167'),
     CONTACT_SOLID('\uea8c'),
     ADD('\ue710'),
+    PLAY('\ue768'),
     PLAY_SOLID('\uf5b0'),
     OPEN_LOCAL('\ue8da'),
     CHROME_BACK('\ue830'),
