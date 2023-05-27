@@ -28,6 +28,7 @@ public enum MicrosoftSegoeIcon implements IconCode
     DIAGNOSTIC('\ue9d9'),
     CLEAR_ALL_INK('\ued62'),
     COMPANION_DEVICE_FRAMEWORK('\ued5d'),
+    STATUS_ERROR_FULL('\ueb90'),
     SAVE('\ue74e');
 
     private final char character;
